@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Card</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: transparent;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 6px;
+        }
+        
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2937;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        
+        .stat-change {
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .positive {
+            color: #10b981;
+        }
+        
+        .negative {
+            color: #ef4444;
+        }
+        
+        .colorush {
+            border-left-color: #0d9488;
+        }
+        
+        .colorush .stat-value {
+            color: #0d9488;
+        }
+        
+        .etsy {
+            border-left-color: #d97706;
+        }
+        
+        .etsy .stat-value {
+            color: #d97706;
+        }
+        
+        .personal {
+            border-left-color: #3b82f6;
+        }
+        
+        .personal .stat-value {
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-grid">
+        <div class="stat-card etsy">
+            <div class="stat-label">📊 Etsy Sales</div>
+            <div class="stat-value">$2,340</div>
+            <div class="stat-change positive">↑ +18% this month</div>
+        </div>
+        
+        <div class="stat-card colorush">
+            <div class="stat-label">💼 Active Projects</div>
+            <div class="stat-value">7</div>
+            <div class="stat-change">2 proposals pending</div>
+        </div>
+        
+        <div class="stat-card personal">
+            <div class="stat-label">✅ Tasks Done</div>
+            <div class="stat-value">42</div>
+            <div class="stat-change positive">↑ +8 this week</div>
+        </div>
+    </div>
+    
+    <script>
+        // Easily update these numbers
+        const stats = {
+            etsy: { value: '$2,340', change: '↑ +18% this month' },
+            colorush: { value: '7', change: '2 proposals pending' },
+            personal: { value: '42', change: '↑ +8 this week' }
+        };
+    </script>
+</body>
+</html>
